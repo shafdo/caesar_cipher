@@ -12,11 +12,24 @@ python3 caesar_cipher.py
 
 <img src="https://i.imgur.com/PZiMPPA.png">
 
-This program allows you to do 3
+This program allows you to:
 <ul>
   <li>Encrypt</li>
   <li>Decrypt</li>
   <li>Bruteforce</li>
 </ul>
+
+# Encrypting
+
+<img src="https://i.imgur.com/kXVsJnC.png">
+
+# Decrypting
+
+<img src="https://i.imgur.com/1Yy0i5x.png">
+
+# Bruteforcing
+
+<img src="https://i.imgur.com/sru0tJv.png">
+
 
 
