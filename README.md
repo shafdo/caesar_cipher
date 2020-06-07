@@ -8,15 +8,15 @@ The Caesar cipher is one of the earliest known and simplest ciphers in the world
 prerequisites: Python3
 
 USAGE:
-
-LINUX / UNIX
 python3 caesar_cipher.py
-
-WINDOWS
-python caesar_cipher.py
-
-MAC
-python3 caesar_cipher.py
-
 
 <img src="https://i.imgur.com/PZiMPPA.png">
+
+This program allows you to do 3
+<ul>
+  <li>Encrypt</li>
+  <li>Decrypt</li>
+  <li>Bruteforce</li>
+</ul>
+
+
