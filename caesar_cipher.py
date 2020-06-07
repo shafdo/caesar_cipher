@@ -174,57 +174,59 @@ class Main():
 		self.letters_symbols = string.ascii_uppercase+string.ascii_lowercase+string.digits+string.punctuation+' '
 		running = True
 
-		while running:
+		try:
+			while running:
 			
-			if counter != 0:
-				text = input("\n[+] Enter text ---> ")
-			else:
-				text = input("[+] Enter text ---> ")
-				counter+=1
-
-			if text == '99':
-				time.sleep(0.5)
-				self.decision()
-
-			elif text == 'clear()':
-				if osname == 'nt':
-					wincls()
+				if counter != 0:
+					text = input("\n[+] Enter text ---> ")
 				else:
-					clear()
-				self.banner()
-				print("\n\n[ :) ] Decrypting process Starting \... ( Press \033[1;32;48m99\033[00m to go back To main Menu )\n")
-				self.decrypting()
+					text = input("[+] Enter text ---> ")
+					counter+=1
 
-			elif text == 'exit()':
-				print("\n\n[-] Exiting Program \... Have a Nice day :)")
-				time.sleep(0.5)
-				sys.exit()
+				if text == '99':
+					time.sleep(0.5)
+					self.decision()
 
-			decrypt_list = []
-
-			for count in range(94):
-				time.sleep(0.5)
-				for i in text:
-					shifting = 0
-					finding = self.letters_symbols.find(i)
-					shifting = finding-count
-
-					if shifting == 83:
-						print(self.letters_symbols[shifting],end="")
-						continue
-
-					elif shifting < 0:
-						get = self.letters_symbols[shifting]
-						get1 = self.letters_symbols.find(get)
-						print(self.letters_symbols[get1],end="")
-						continue
-
+				elif text == 'clear()':
+					if osname == 'nt':
+						wincls()
 					else:
-						print(self.letters_symbols[shifting],end="")
+						clear()
+					self.banner()
+					print("\n\n[ :) ] Decrypting process Starting \... ( Press \033[1;32;48m99\033[00m to go back To main Menu )\n")
+					self.decrypting()
 
-				print("")
+				elif text == 'exit()':
+					print("\n\n[-] Exiting Program \... Have a Nice day :)")
+					time.sleep(0.5)
+					sys.exit()
 
+				decrypt_list = []
 
+				for count in range(94):
+					time.sleep(0.5)
+					for i in text:
+						shifting = 0
+						finding = self.letters_symbols.find(i)
+						shifting = finding-count
+
+						if shifting == 83:
+							print(self.letters_symbols[shifting],end="")
+							continue
+
+						elif shifting < 0:
+							get = self.letters_symbols[shifting]
+							get1 = self.letters_symbols.find(get)
+							print(self.letters_symbols[get1],end="")
+							continue
+
+						else:
+							print(self.letters_symbols[shifting],end="")
+
+					print("")
+
+		except KeyboardInterrupt:
+			cprint("\n\n[-] Exiting ...\n","red")
 
 
 
